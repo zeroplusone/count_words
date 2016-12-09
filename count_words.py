@@ -11,6 +11,7 @@ if __name__ == "__main__":
         for line in f:
             sentence = re.split('-| |\n', line)
             for word in sentence:
+                word = word.lower()
                 if bool(re.search(r'\d', word)):
                     continue
                 elif word in dic:

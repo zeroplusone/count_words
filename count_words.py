@@ -8,7 +8,7 @@ if __name__ == "__main__":
     dic = {}
     with fileinput.input(files=input_file) as f:
         for line in f:
-            sentence = line.split()
+            sentence = re.split('-| |\n', line)
             for word in sentence:
                 if word in dic:
                     dic[word]=dic[word]+1

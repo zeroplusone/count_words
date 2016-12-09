@@ -14,6 +14,8 @@ if __name__ == "__main__":
                 word = word.lower()
                 if bool(re.search(r'\d', word)):
                     continue
+                elif word == '':
+                    continue
                 elif word in dic:
                     dic[word]=dic[word]+1
                 else:

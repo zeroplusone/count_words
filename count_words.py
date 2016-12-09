@@ -1,5 +1,6 @@
 import re
 import sys
+import string
 import fileinput
 
 if __name__ == "__main__":
@@ -10,7 +11,9 @@ if __name__ == "__main__":
         for line in f:
             sentence = re.split('-| |\n', line)
             for word in sentence:
-                if word in dic:
+                if bool(re.search(r'\d', word)):
+                    continue
+                elif word in dic:
                     dic[word]=dic[word]+1
                 else:
                     dic[word]=1

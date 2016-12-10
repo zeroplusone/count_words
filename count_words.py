@@ -2,7 +2,7 @@ import re
 import sys
 import fileinput
 
-abbr = ["dr"]
+abbr = ["dr", "st", "no", "tennis.com"]
 symbols = [",", ".", "?", "!", ":", ";","\"",
            "(", ")", "[", "]", "$", "[", "]", "{", "}"]
 
